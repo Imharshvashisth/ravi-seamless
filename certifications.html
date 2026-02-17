@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Seamless Pipes | Ultra-Premium</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/index.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/rsp-logo.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* -----------------------------------------------------------
+           ROOT VARIABLES - ULTRA LUXURY THEME
+        ----------------------------------------------------------- */
+        :root {
+            /* Backgrounds */
+            --bg-body: #020202;
+            /* Pure Dark */
+            --glass-bg: rgba(20, 20, 20, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.08);
+
+            /* Brand Colors (Vibrant Industrial) */
+            --primary: #FFD700;
+            /* Gold Yellow */
+            --primary-glow: rgba(255, 215, 0, 0.5);
+            --secondary: #FF4500;
+            /* Molten Orange */
+
+            /* Text Colors */
+            --text-main: #ffffff;
+            --text-muted: #aaaaaa;
+
+            /* Fonts */
+            --font-heading: 'Syne', sans-serif;
+            --font-body: 'Manrope', sans-serif;
+
+            /* Animation */
+            --ease-lux: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .rv-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 40px;
+            /* Increased default padding */
+            position: relative;
+            z-index: 2;
+        }
+
+        /* -----------------------------------------------------------
+           1. HERO SECTION (Updated Minimal Design)
+        ----------------------------------------------------------- */
+        .rv-cert-hero {
+            min-height: 50vh;
+            /* Compact height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+        }
+
+        .rv-cert-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), #020202), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            z-index: 0;
+            filter: grayscale(100%) contrast(1.1);
+        }
+
+        .rv-cert-hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        /* Font Size Adjusted to Perfect Size */
+        .rv-cert-hero-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            /* Perfect balanced size */
+            line-height: 1.2;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 0;
+            opacity: 0;
+            animation: rv-fade-up 0.8s ease forwards 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            /* margin-top: 20px; */
+        }
+
+        .rv-cert-hero-title span {
+            color: var(--text-main);
+            /* -webkit-text-stroke: 1px var(--primary); */
+        }
+
+        @keyframes rv-fade-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* -----------------------------------------------------------
+           CERTIFICATIONS GALLERY (Professional Look)
+        ----------------------------------------------------------- */
+        .rv-cert-display-section {
+            padding: 80px 50px;
+            /* Added specific side padding */
+            background-color: #050505;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Grid */
+        .rv-cert-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 Columns for Desktop */
+            gap: 40px;
+            /* Proper spacing between cards */
+        }
+
+        /* Card Style - Professional Frame */
+        .rv-cert-card {
+            background: #111;
+            border: 1px solid var(--border-dim);
+            padding: 20px;
+            border-radius: 4px;
+            position: relative;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            /* Aspect ratio for A4 paper look */
+            aspect-ratio: 3 / 4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Image Box - White Paper Effect */
+        .rv-cert-img-box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+            /* White background like paper */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #333;
+        }
+
+        .rv-cert-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* Shows full image */
+            transition: transform 0.5s ease;
+            padding: 5px;
+            /* Small inner padding */
+        }
+
+        /* Overlay with Icon */
+        .rv-cert-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            border: 1px solid var(--primary);
+            /* Gold border on hover */
+        }
+
+        .rv-cert-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 1.2rem;
+            transform: scale(0.5);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 10px;
+        }
+
+        .rv-view-text {
+            color: #fff;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transform: translateY(10px);
+            transition: transform 0.3s;
+        }
+
+        /* --- HOVER EFFECTS --- */
+        .rv-cert-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.1);
+        }
+
+        .rv-cert-card:hover .rv-cert-overlay {
+            opacity: 1;
+        }
+
+        .rv-cert-card:hover .rv-cert-icon {
+            transform: scale(1);
+        }
+
+        .rv-cert-card:hover .rv-view-text {
+            transform: translateY(0);
+        }
+
+        .rv-cert-card:hover .rv-cert-img {
+            transform: scale(1.02);
+        }
+
+        /* --- LIGHTBOX STYLES --- */
+        .rv-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .rv-lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .rv-lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.2);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            background: #fff;
+        }
+
+        .rv-lightbox.active .rv-lightbox-img {
+            transform: scale(1);
+        }
+
+        .rv-close-btn {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 3rem;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 10001;
+        }
+
+        .rv-close-btn:hover {
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .rv-cert-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .rv-cert-display-section {
+                padding: 60px 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .rv-cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rv-cert-hero-title {
+                font-size: 1.5rem;
+            }
+
+            .rv-cert-display-section {
+                padding: 60px 20px;
+            }
+        }
+
+        .rv-cert-header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--primary);
+            display: inline-block;
+        }
+
+        .rv-cert-title {
+            text-transform: uppercase;
+            font-size: 2.5rem;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <!-- Sticker HTML -->
+    <img src="assets/images/logo/freepik__img1-as-the-given-image-make-yellow-dress-up-inste__7978.png" alt="Sticker"
+        class="fixed-sticker">
+
+    <!-- HTML STRUCTURE -->
+    <div class="rv-sticky-bar">
+
+        <!-- Phone -->
+        <a href="tel:+919992500500" class="rv-sticky-btn">
+            <i class="ri-phone-fill"></i>
+            <span class="rv-tooltip">Call Now</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919992500500" target="_blank" class="rv-sticky-btn rv-pulse">
+            <i class="ri-whatsapp-line"></i>
+            <span class="rv-tooltip">WhatsApp</span>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:info@ravistainless.com" class="rv-sticky-btn">
+            <i class="ri-mail-send-fill"></i>
+            <span class="rv-tooltip">Get Quote</span>
+        </a>
+
+    </div>
+
+
+
+   <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo/rsp-logo.png" alt="Ravi Seamless Pipes" class="navbar-logo-img">
+            </a>
+
+            <!-- Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="ri-menu-5-fill"></i>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <button class="mobile-close-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="ri-close-line"></i>
+                </button>
+
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><span class="dropdown-header">Our Range</span></li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-pipes-erw-nb.html">
+                                    <i class="ri-fire-line"></i> Stainless Steel Pipes (ERW NB Pipes)
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-tubes-erw-od.html">
+                                    <i class="ri-contrast-drop-2-line"></i> Stainless Steel Tubes (ERW OD Pipes)
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-welded-rectangular-pipes.html">
+                                    <i class="ri-u-disk-line"></i> Stainless Steel Welded Rectangular Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-welded-square-pipes.html">
+                                    <i class="ri-settings-4-line"></i> Stainless Steel Welded Square Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-welded-oval-pipes.html">
+                                    <i class="ri-fire-line"></i> Stainless Steel Welded Oval Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-slotted-pipes.html">
+                                    <i class="ri-contrast-drop-2-line"></i> Stainless Steel Slotted Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-coils-and-strips.html">
+                                    <i class="ri-u-disk-line"></i> Stainless Steel Coils and Strips
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-sheets-and-plates.html">
+                                    <i class="ri-settings-4-line"></i> Stainless Steel Sheets and Plates
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="applications.html">Applications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                    <li class="nav-item btn-quote-wrapper">
+                        <a href="#" class="btn btn-quote">Download Brochure</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- HERO SECTION -->
+    <header class="rv-cert-hero">
+        <div class="rv-cert-hero-bg"></div>
+        <div class="rv-container">
+            <div class="rv-cert-hero-content">
+                <h1 class="rv-cert-hero-title">Our <span>Certifications</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- CERTIFICATES GALLERY -->
+    <section class="rv-cert-display-section">
+
+        <div class="rv-container">
+
+            <!-- Optional Sub-Header -->
+            <div class="rv-cert-header">
+                <h2 class="rv-cert-title">Our Compliance Standards</h2>
+                <p class="rv-cert-desc" style="color: #888;">
+                    Click on any certificate to view the detailed document.
+                </p>
+            </div>
+
+            <!-- Certificates Grid -->
+            <div class="rv-cert-grid">
+
+                <!-- Cert 1 -->
+                <div class="rv-cert-card"
+                    onclick="openLightbox('assets/images/new-certificates/Certificate-pages-31_page-0001.jpg')">
+                    <div class="rv-cert-img-box">
+                        <img src="assets/images/new-certificates/Certificate-pages-31_page-0001.jpg"
+                            alt="ISO 9001 Certificate" class="rv-cert-img">
+                    </div>
+                    <div class="rv-cert-overlay">
+                        <div class="rv-cert-icon"><i class="ri-zoom-in-line"></i></div>
+                        <span class="rv-view-text">View Certificate</span>
+                    </div>
+                </div>
+ 
+                <!-- Cert 2 -->
+                <div class="rv-cert-card"
+                    onclick="openLightbox('assets/images/new-certificates/ISSDA Membership Certificate Ravi Seamless Pipes 2025-26_page-0001.jpg')">
+                    <div class="rv-cert-img-box">
+                        <img src="assets/images/new-certificates/ISSDA Membership Certificate Ravi Seamless Pipes 2025-26_page-0001.jpg"
+                            alt="ISO 14001 Certificate" class="rv-cert-img">
+                    </div>
+                    <div class="rv-cert-overlay">
+                        <div class="rv-cert-icon"><i class="ri-zoom-in-line"></i></div>
+                        <span class="rv-view-text">View Certificate</span>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="rv-cert-card"
+                    onclick="openLightbox('assets/images/new-certificates/WhatsApp Image 2026-02-11 at 1.09.30 PM.jpeg')">
+                    <div class="rv-cert-img-box">
+                        <img src="assets/images/new-certificates/WhatsApp Image 2026-02-11 at 1.09.30 PM.jpeg"
+                            alt="API 5L Certificate" class="rv-cert-img">
+                    </div>
+                    <div class="rv-cert-overlay">
+                        <div class="rv-cert-icon"><i class="ri-zoom-in-line"></i></div>
+                        <span class="rv-view-text">View Certificate</span>
+                    </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="rv-cert-card"
+                    onclick="openLightbox('assets/images/new-certificates/WhatsApp Image 2026-02-11 at 1.12.23 PM.jpeg')">
+                    <div class="rv-cert-img-box">
+                        <img src="assets/images/new-certificates/WhatsApp Image 2026-02-11 at 1.12.23 PM.jpeg"
+                            alt="PED Certificate" class="rv-cert-img">
+                    </div>
+                    <div class="rv-cert-overlay">
+                        <div class="rv-cert-icon"><i class="ri-zoom-in-line"></i></div>
+                        <span class="rv-view-text">View Certificate</span>
+                    </div>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="rv-cert-card"
+                    onclick="openLightbox('assets/images/new-certificates/WhatsApp Image 2026-02-11 at 1.15.06 PM.jpeg')">
+                    <div class="rv-cert-img-box">
+                        <img src="assets/images/new-certificates/WhatsApp Image 2026-02-11 at 1.15.06 PM.jpeg"
+                            alt="IBR Certificate" class="rv-cert-img">
+                    </div>
+                    <div class="rv-cert-overlay">
+                        <div class="rv-cert-icon"><i class="ri-zoom-in-line"></i></div>
+                        <span class="rv-view-text">View Certificate</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="rv-lightbox" class="rv-lightbox" onclick="closeLightbox()">
+        <span class="rv-close-btn">&times;</span>
+        <img class="rv-lightbox-img" id="rv-lightbox-img" src="" alt="Certificate Full View">
+    </div>
+
+    <!-- JAVASCRIPT FOR LIGHTBOX -->
+    <script>
+        const lightbox = document.getElementById('rv-lightbox');
+        const lightboxImg = document.getElementById('rv-lightbox-img');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Disable scroll
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Enable scroll
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer start -->
+    <footer class="rv-footer">
+
+        <!-- Scroll Top Btn -->
+        <button class="rv-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <i class="ri-arrow-up-line" style="font-size: 1.5rem;"></i>
+        </button>
+
+        <div class="rv-footer-container">
+
+            <!-- Main Grid -->
+            <div class="rv-footer-grid">
+
+                <!-- Col 1: Brand -->
+                <div class="rv-footer-col">
+                    <div class="rv-footer-logo">RAVI <span>SEAMLESS</span></div>
+                    <p class="rv-footer-desc">
+                        Engineering the future of piping with precision, durability, and global standards. Your trusted
+                        partner for stainless steel solutions.
+                    </p>
+                    <div class="rv-social-links">
+                        <a href="https://www.linkedin.com/company/ravi-seamless" target="_blank"
+                            class="rv-social-icon"><i class="ri-linkedin-fill"></i></a>
+                        <a href="https://twitter.com/ravi_seamless" target="_blank" class="rv-social-icon"><i
+                                class="ri-twitter-x-fill"></i></a>
+                        <a href="https://www.facebook.com/raviseamless" target="_blank" class="rv-social-icon"><i
+                                class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/raviseamless" target="_blank" class="rv-social-icon"><i
+                                class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="rv-footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="rv-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Products -->
+                <div class="rv-footer-col">
+                    <h4>Products</h4>
+                    <ul class="rv-footer-links">
+                        <li>
+                            <a href="stainless-steel-pipes-erw-nb.html">
+                                <i class="ri-fire-line"></i> Stainless Steel Pipes (ERW NB Pipes)
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stainless-steel-tubes-erw-od.html">
+                                <i class="ri-contrast-drop-2-line"></i> Stainless Steel Tubes (ERW OD Pipes)
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stainless-steel-welded-rectangular-pipes.html">
+                                <i class="ri-u-disk-line"></i> Stainless Steel Welded Rectangular Pipes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stainless-steel-welded-square-pipes.html">
+                                <i class="ri-settings-4-line"></i> Stainless Steel Welded Square Pipes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="rv-footer-col">
+                    <h4>Stay Updated</h4>
+                    <div class="rv-newsletter-box">
+                        <p class="rv-news-text">Subscribe to our newsletter for latest industry updates and company
+                            news.</p>
+                        <form class="rv-news-form">
+                            <input type="email" class="rv-news-input" placeholder="Enter your email" required>
+                            <button type="submit" class="rv-news-btn"><i class="ri-send-plane-fill"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="rv-footer-divider"></div>
+
+            <!-- Bottom Row -->
+            <div class="rv-footer-bottom">
+                <div class="rv-copyright">
+                    &copy; 2026 Ravi Seamless Pipes & Tubes Pvt. Ltd. All Rights Reserved.
+                    designed by <span> <a href="https://www.webadsindia.com/"
+                            style="text-decoration: none; color: #ffff;"> Web Ads India </a> </span>
+                </div>
+                <div class="rv-footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        // Scroll Effect for Navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 20) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // Mobile Menu Close Logic
+        const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item');
+        const menuToggle = document.querySelector('.navbar-collapse');
+        const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
+
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => {
+                if (window.innerWidth < 992 && menuToggle.classList.contains('show')) {
+                    bsCollapse.hide();
+                }
+            });
+        });
+
+        // GSAP Animations
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const tl = gsap.timeline();
+
+            // 1. Reveal Overline
+            tl.to(".hero-overline", {
+                y: 0,
+                duration: 0.8,
+                ease: "power3.out",
+                delay: 0.2
+            })
+                // 2. Reveal Title Words (Staggered)
+                .to(".hero-title .word", {
+                    y: 0,
+                    duration: 1,
+                    stagger: 0.15,
+                    ease: "power4.out"
+                }, "-=0.4")
+                // 3. Fade In Description
+                .to(".hero-desc", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                }, "-=0.5")
+                // 4. Reveal Buttons
+                .to(".hero-btn-group", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                }, "-=0.6")
+                // 5. Reveal Stats Card
+                .to(".hero-stats-card", {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: "power3.out"
+                }, "-=0.6")
+                // 6. Scroll Indicator
+                .to(".scroll-indicator", {
+                    opacity: 1,
+                    duration: 1
+                }, "-=0.4");
+        });
+    </script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".productSwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+</body>
+
+</html>

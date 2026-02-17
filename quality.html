@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Seamless Pipes | Ultra-Premium</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/index.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/rsp-logo.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+    <style>
+        .rv-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* -----------------------------------------------------------
+           1. HERO SECTION (rv-quality-hero)
+        ----------------------------------------------------------- */
+        .rv-quality-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+        }
+
+        .rv-quality-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Image: Inspection/Close up of metal/Microscope */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), #0202029c), url('assets/images/banner/quality-ban.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            z-index: 0;
+            transform: scale(1.1);
+            /* filter: grayscale(100%) contrast(1.1); */
+            transition: 1s;
+        }
+
+        .rv-quality-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .rv-quality-sub {
+            color: var(--primary);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: rv-fade-up 0.8s ease forwards 0.3s;
+        }
+
+        .rv-quality-title {
+            font-family: var(--font-heading);
+            font-size: 4.5rem;
+            line-height: 1.1;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: rv-fade-up 0.8s ease forwards 0.6s;
+        }
+
+        .rv-quality-title span {
+            color: transparent;
+            -webkit-text-stroke: 1px var(--primary);
+        }
+
+        @keyframes rv-fade-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* -----------------------------------------------------------
+           2. QUALITY POLICY (rv-policy)
+        ----------------------------------------------------------- */
+        .rv-policy-section {
+            padding: 100px 0;
+            position: relative;
+            background: #0a0a0a;
+        }
+
+        .rv-policy-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .rv-policy-text-col {
+            border-left: 3px solid var(--primary);
+            padding-left: 40px;
+        }
+
+        .rv-policy-head {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .rv-policy-desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .rv-policy-sign {
+            font-family: 'Satisfy', cursive;
+            /* Optional fancy font, sticking to heading for now */
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-style: italic;
+        }
+
+        .rv-policy-img-col {
+            position: relative;
+        }
+
+        .rv-policy-img {
+            width: 100%;
+            border-radius: 4px;
+            transition: 0.5s;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+ 
+        /* -----------------------------------------------------------
+           3. TESTING LAB (rv-lab)
+        ----------------------------------------------------------- */
+        .rv-lab-section {
+            padding: 120px 0;
+            background-color: var(--bg-body);
+            position: relative;
+        }
+
+        .rv-lab-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .rv-lab-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Grid */
+        .rv-lab-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .rv-lab-card {
+            background: #050505;
+            /* Fallback */
+            border: 1px solid #ffffff6f;
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            min-height: 400px;
+            /* Increased height for better visual */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            /* Push content to bottom */
+        }
+
+        /* Background Image */
+        .rv-lab-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) brightness(0.3);
+            /* Initial: BW & Dark */
+            transition: all 0.6s ease;
+            z-index: 0;
+        }
+
+        /* Hover State */
+        .rv-lab-card:hover .rv-lab-bg {
+            filter: grayscale(0%) brightness(0.6);
+            /* Color & Brighter */
+            transform: scale(1.1);
+            /* Zoom Effect */
+        }
+
+        .rv-lab-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Gradient Overlay for Text Readability */
+        .rv-lab-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Content Z-Index */
+        .rv-lab-icon,
+        .rv-lab-head,
+        .rv-lab-desc,
+        .rv-lab-num {
+            position: relative;
+            z-index: 2;
+        }
+
+        .rv-lab-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        .rv-lab-card:hover .rv-lab-icon {
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        .rv-lab-head {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .rv-lab-desc {
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Number Watermark */
+        .rv-lab-num {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 4rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.05);
+            font-family: var(--font-heading);
+            line-height: 1;
+        }
+
+        .rv-lab-card:hover .rv-lab-num {
+            color: rgba(255, 215, 0, 0.1);
+        }
+
+        /* -----------------------------------------------------------
+           4. STANDARDS (rv-std) - NEW PREMIUM DESIGN
+        ----------------------------------------------------------- */
+        .rv-std-section {
+            padding: 120px 0;
+            background: url(./assets/images/backgrounds/102643.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+            border-top: 1px solid var(--border-dim);
+            background-attachment: fixed;
+        }
+
+        .rv-std-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.845);
+            /* black overlay adjust here */
+            pointer-events: none;
+        }
+
+        .rv-std-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .rv-std-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: white;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        /* Tech Grid */
+        .rv-std-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .rv-std-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid #ddc4376b;
+            padding: 30px 20px;
+            position: relative;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Gold Line Animation on Left */
+        .rv-std-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 0%;
+            background: var(--primary);
+            transition: height 0.4s ease;
+        }
+
+        .rv-std-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+            border-color: rgba(255, 215, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .rv-std-card:hover::before {
+            height: 100%;
+        }
+
+        .rv-std-code {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        .rv-std-card:hover .rv-std-code {
+            color: var(--primary);
+        }
+
+        .rv-std-desc {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .rv-policy-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .rv-lab-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .rv-std-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .rv-quality-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .rv-lab-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rv-std-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rv-policy-text-col {
+                padding-left: 20px;
+                border-left-width: 2px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <!-- Sticker HTML -->
+    <img src="assets/images/logo/freepik__img1-as-the-given-image-make-yellow-dress-up-inste__7978.png" alt="Sticker"
+        class="fixed-sticker">
+
+
+
+    <!-- HTML STRUCTURE -->
+    <div class="rv-sticky-bar">
+
+        <!-- Phone -->
+        <a href="tel:+919992500500" class="rv-sticky-btn">
+            <i class="ri-phone-fill"></i>
+            <span class="rv-tooltip">Call Now</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919992500500" target="_blank" class="rv-sticky-btn rv-pulse">
+            <i class="ri-whatsapp-line"></i>
+            <span class="rv-tooltip">WhatsApp</span>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:info@ravistainless.com" class="rv-sticky-btn">
+            <i class="ri-mail-send-fill"></i>
+            <span class="rv-tooltip">Get Quote</span>
+        </a>
+
+    </div>
+
+
+
+ <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo/rsp-logo.png" alt="Ravi Seamless Pipes" class="navbar-logo-img">
+            </a>
+
+            <!-- Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="ri-menu-5-fill"></i>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <button class="mobile-close-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="ri-close-line"></i>
+                </button>
+
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><span class="dropdown-header">Our Range</span></li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-pipes-erw-nb.html">
+                                    <i class="ri-fire-line"></i> Stainless Steel Pipes (ERW NB Pipes)
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-tubes-erw-od.html">
+                                    <i class="ri-contrast-drop-2-line"></i> Stainless Steel Tubes (ERW OD Pipes)
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-welded-rectangular-pipes.html">
+                                    <i class="ri-u-disk-line"></i> Stainless Steel Welded Rectangular Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-welded-square-pipes.html">
+                                    <i class="ri-settings-4-line"></i> Stainless Steel Welded Square Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-welded-oval-pipes.html">
+                                    <i class="ri-fire-line"></i> Stainless Steel Welded Oval Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-slotted-pipes.html">
+                                    <i class="ri-contrast-drop-2-line"></i> Stainless Steel Slotted Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-coils-and-strips.html">
+                                    <i class="ri-u-disk-line"></i> Stainless Steel Coils and Strips
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-sheets-and-plates.html">
+                                    <i class="ri-settings-4-line"></i> Stainless Steel Sheets and Plates
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="applications.html">Applications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                    <li class="nav-item btn-quote-wrapper">
+                        <a href="#" class="btn btn-quote">Download Brochure</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- HERO SECTION -->
+    <header class="rv-quality-hero">
+        <div class="rv-quality-bg"></div>
+        <div class="rv-container">
+            <div class="rv-quality-content">
+                <span class="rv-quality-sub">Zero Defect Policy</span>
+                <h1 class="rv-quality-title">
+                    Uncompromising <br><span>Quality.</span>
+                </h1>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- POLICY SECTION -->
+    <section class="rv-policy-section">
+        <div class="rv-container">
+            <div class="rv-policy-wrapper">
+                <div class="rv-policy-text-col">
+                    <h2 class="rv-policy-head">Our Commitment</h2>
+                    <p class="rv-policy-desc">
+                        At Ravi Seamless, quality is at the heart of every pipe and tube we produce. Following a strict
+                        "Zero Defect" policy, we ensure that our seamless pipes, stainless tubes, U-bend tubes,
+                        instrumentation tubes, and pipe fittings meet international ASTM/API standards. From material
+                        selection to final inspection, our advanced testing and quality management systems guarantee
+                        products you can trust in critical applications worldwide.
+                    </p>
+                    <div class="rv-policy-sign">Certified & Approved by Quality Board</div>
+                </div>
+                <div class="rv-policy-img-col">
+                    <img src="assets/images/quality/our-commitment.jpeg"
+                        alt="Quality Inspection" class="rv-policy-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TESTING FACILITIES (LAB) -->
+    <section class="rv-lab-section">
+        <div class="rv-container">
+            <div class="rv-lab-header">
+                <span class="rv-quality-sub">Advanced Testing</span>
+                <h2 class="rv-lab-title">World-Class Laboratory</h2>
+                <p style="color: #888;">Equipped with modern NDT and destructive testing facilities to ensure
+                    zero-defect products.</p>
+            </div>
+
+            <div class="rv-lab-grid">
+
+                <!-- Test 1 -->
+                <div class="rv-lab-card">
+                    <img src="assets/images/quality/advanced-testing/hydrostatic-testing.jpeg"
+                        alt="Hydro Test" class="rv-lab-bg">
+                    <div class="rv-lab-num">01</div>
+                    <i class="ri-microscope-line rv-lab-icon"></i>
+                    <h3 class="rv-lab-head">Hydrostatic Testing</h3>
+                    <p class="rv-lab-desc">
+                        All seamless pipes and tubes undergo high-pressure water tests to verify leak-proof performance
+                        under extreme operating conditions.
+                    </p>
+                </div>
+
+                <!-- Test 2 -->
+                <div class="rv-lab-card">
+                    <img src="assets/images/quality/advanced-testing/ultrasonic-testing.jpeg"
+                        alt="Ultrasonic Test" class="rv-lab-bg">
+                    <div class="rv-lab-num">02</div>
+                    <i class="ri-radar-line rv-lab-icon"></i>
+                    <h3 class="rv-lab-head">Ultrasonic Testing (UT)</h3>
+                    <p class="rv-lab-desc">
+                        Non-destructive evaluation to detect internal flaws, measure wall thickness, and ensure
+                        uniformity in stainless and carbon steel tubes.
+                    </p>
+                </div>
+
+                <!-- Test 3 -->
+                <div class="rv-lab-card">
+                    <img src="assets/images/quality/advanced-testing/chemical-composition.jpeg"
+                        alt="Chemical Analysis" class="rv-lab-bg">
+                    <div class="rv-lab-num">03</div>
+                    <i class="ri-flask-line rv-lab-icon"></i>
+                    <h3 class="rv-lab-head">Chemical Composition Analysis</h3>
+                    <p class="rv-lab-desc">
+                        Spectrometer tests confirm exact alloy composition to meet ASTM, API, and client-specific
+                        standards for every batch.
+                    </p>
+                </div>
+
+                <!-- Test 4 -->
+                <div class="rv-lab-card">
+                    <img src="assets/images/quality/advanced-testing/mechanical-testing.jpeg"
+                        alt="Mechanical Test" class="rv-lab-bg">
+                    <div class="rv-lab-num">04</div>
+                    <i class="ri-hammer-line rv-lab-icon"></i>
+                    <h3 class="rv-lab-head">Mechanical Testing</h3>
+                    <p class="rv-lab-desc">
+                        Tensile, hardness, and impact tests certify the strength, elongation, and durability of pipes
+                        and tubes for high-pressure and critical applications.
+                    </p>
+                </div>
+
+                <!-- Test 5 -->
+                <div class="rv-lab-card">
+                    <img src="assets/images/quality/advanced-testing/visual.jpeg"
+                        alt="Visual Inspection" class="rv-lab-bg">
+                    <div class="rv-lab-num">05</div>
+                    <i class="ri-search-eye-line rv-lab-icon"></i>
+                    <h3 class="rv-lab-head">Visual & Dimensional Inspection</h3>
+                    <p class="rv-lab-desc">
+                        100% visual and dimensional inspection ensures straightness, surface finish, and adherence to
+                        precise tolerances for all products.
+                    </p>
+                </div>
+
+                <!-- Test 6 -->
+                <div class="rv-lab-card">
+                    <img src="assets/images/quality/advanced-testing/material-certifications.jpeg"
+                        alt="Certification" class="rv-lab-bg">
+                    <div class="rv-lab-num">06</div>
+                    <i class="ri-file-shield-2-line rv-lab-icon"></i>
+                    <h3 class="rv-lab-head">Material Certification</h3>
+                    <p class="rv-lab-desc">
+                        Every shipment is accompanied by EN 10204 3.1 & 3.2 Material Test Certificates (MTC), providing
+                        full traceability and client assurance.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- STANDARDS COMPLIANCE (Updated for Ravi Seamless) -->
+    <section class="rv-std-section">
+        <div class="rv-container">
+            <div class="rv-std-header">
+                <span class="rv-quality-sub">Technical Specs</span>
+                <h2 class="rv-std-title">Global Standards</h2>
+                <p style="color:#888; margin-top: 10px;">All pipes and tubes engineered to meet international ASTM, API,
+                    DIN, and IS standards, ensuring reliability and safety in critical applications.</p>
+            </div>
+
+            <div class="rv-std-grid">
+
+                <div class="rv-std-card">
+                    <div class="rv-std-code">ASTM A106</div>
+                    <div class="rv-std-desc">Seamless Carbon Steel Pipes for High-Temperature Service</div>
+                </div>
+
+                <div class="rv-std-card">
+                    <div class="rv-std-code">ASTM A53</div>
+                    <div class="rv-std-desc">Black & Hot-Dipped Steel Pipes for General Applications</div>
+                </div>
+
+                <div class="rv-std-card">
+                    <div class="rv-std-code">API 5L</div>
+                    <div class="rv-std-desc">Line Pipes for Oil & Gas Transmission</div>
+                </div>
+
+                <div class="rv-std-card">
+                    <div class="rv-std-code">DIN 17175</div>
+                    <div class="rv-std-desc">Seamless Heat-Resistant Alloy Pipes</div>
+                </div>
+
+                <div class="rv-std-card">
+                    <div class="rv-std-code">ASME SA210</div>
+                    <div class="rv-std-desc">Boiler and Superheater Tubes for Power Plants</div>
+                </div>
+
+                <div class="rv-std-card">
+                    <div class="rv-std-code">BS 3059</div>
+                    <div class="rv-std-desc">Seamless Heat Exchanger Tubes for Industrial Applications</div>
+                </div>
+
+                <div class="rv-std-card">
+                    <div class="rv-std-code">IS 1239</div>
+                    <div class="rv-std-desc">Mild Steel Pipes for Water and General Engineering</div>
+                </div>
+
+                <div class="rv-std-card">
+                    <div class="rv-std-code">EN 10216</div>
+                    <div class="rv-std-desc">Seamless Steel Pipes for Pressure Purposes</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- footer start -->
+    <footer class="rv-footer">
+
+        <!-- Scroll Top Btn -->
+        <button class="rv-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <i class="ri-arrow-up-line" style="font-size: 1.5rem;"></i>
+        </button>
+
+        <div class="rv-footer-container">
+
+            <!-- Main Grid -->
+            <div class="rv-footer-grid">
+
+                <!-- Col 1: Brand -->
+                <div class="rv-footer-col">
+                    <div class="rv-footer-logo">RAVI <span>SEAMLESS</span></div>
+                    <p class="rv-footer-desc">
+                        Engineering the future of piping with precision, durability, and global standards. Your trusted
+                        partner for stainless steel solutions.
+                    </p>
+                    <div class="rv-social-links">
+                        <a href="https://www.linkedin.com/company/ravi-seamless" target="_blank"
+                            class="rv-social-icon"><i class="ri-linkedin-fill"></i></a>
+                        <a href="https://twitter.com/ravi_seamless" target="_blank" class="rv-social-icon"><i
+                                class="ri-twitter-x-fill"></i></a>
+                        <a href="https://www.facebook.com/raviseamless" target="_blank" class="rv-social-icon"><i
+                                class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/raviseamless" target="_blank" class="rv-social-icon"><i
+                                class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="rv-footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="rv-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Products -->
+                <div class="rv-footer-col">
+                    <h4>Products</h4>
+                    <ul class="rv-footer-links">
+                        <li>
+                            <a href="stainless-steel-pipes-erw-nb.html">
+                                <i class="ri-fire-line"></i> Stainless Steel Pipes (ERW NB Pipes)
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stainless-steel-tubes-erw-od.html">
+                                <i class="ri-contrast-drop-2-line"></i> Stainless Steel Tubes (ERW OD Pipes)
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stainless-steel-welded-rectangular-pipes.html">
+                                <i class="ri-u-disk-line"></i> Stainless Steel Welded Rectangular Pipes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stainless-steel-welded-square-pipes.html">
+                                <i class="ri-settings-4-line"></i> Stainless Steel Welded Square Pipes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="rv-footer-col">
+                    <h4>Stay Updated</h4>
+                    <div class="rv-newsletter-box">
+                        <p class="rv-news-text">Subscribe to our newsletter for latest industry updates and company
+                            news.</p>
+                        <form class="rv-news-form">
+                            <input type="email" class="rv-news-input" placeholder="Enter your email" required>
+                            <button type="submit" class="rv-news-btn"><i class="ri-send-plane-fill"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="rv-footer-divider"></div>
+
+            <!-- Bottom Row -->
+            <div class="rv-footer-bottom">
+                <div class="rv-copyright">
+                    &copy; 2026 Ravi Seamless Pipes & Tubes Pvt. Ltd. All Rights Reserved.
+                    designed by <span> <a href="https://www.webadsindia.com/"
+                            style="text-decoration: none; color: #ffff;"> Web Ads India </a> </span>
+                </div>
+                <div class="rv-footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        // Scroll Effect for Navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 20) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // Mobile Menu Close Logic
+        const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item');
+        const menuToggle = document.querySelector('.navbar-collapse');
+        const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
+
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => {
+                if (window.innerWidth < 992 && menuToggle.classList.contains('show')) {
+                    bsCollapse.hide();
+                }
+            });
+        });
+
+        // GSAP Animations
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const tl = gsap.timeline();
+
+            // 1. Reveal Overline
+            tl.to(".hero-overline", {
+                y: 0,
+                duration: 0.8,
+                ease: "power3.out",
+                delay: 0.2
+            })
+                // 2. Reveal Title Words (Staggered)
+                .to(".hero-title .word", {
+                    y: 0,
+                    duration: 1,
+                    stagger: 0.15,
+                    ease: "power4.out"
+                }, "-=0.4")
+                // 3. Fade In Description
+                .to(".hero-desc", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                }, "-=0.5")
+                // 4. Reveal Buttons
+                .to(".hero-btn-group", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                }, "-=0.6")
+                // 5. Reveal Stats Card
+                .to(".hero-stats-card", {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: "power3.out"
+                }, "-=0.6")
+                // 6. Scroll Indicator
+                .to(".scroll-indicator", {
+                    opacity: 1,
+                    duration: 1
+                }, "-=0.4");
+        });
+    </script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".productSwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Seamless Pipes | Ultra-Premium</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/index.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/rsp-logo.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+    <style>
+        :root {
+            /* Backgrounds */
+            --bg-body: #020202;
+            /* Pure Dark */
+            --glass-bg: rgba(20, 20, 20, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.08);
+
+            /* Brand Colors (Vibrant Industrial) */
+            --primary: #FFD700;
+            /* Gold Yellow */
+            --primary-glow: rgba(255, 215, 0, 0.5);
+            --secondary: #FF4500;
+            /* Molten Orange */
+
+            /* Text Colors */
+            --text-main: #ffffff;
+            --text-muted: #aaaaaa;
+
+            /* Fonts */
+            --font-heading: 'Syne', sans-serif;
+            --font-body: 'Manrope', sans-serif;
+
+            /* Animation */
+            --ease-lux: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+
+
+        .rv-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* -----------------------------------------------------------
+           1. HERO SECTION
+        ----------------------------------------------------------- */
+        .rv-infra-hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: #050505;
+            overflow: hidden;
+        }
+
+        .rv-infra-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.785), #02020238), url('assets/images/banner/infrastructure-ban.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            z-index: 0;
+            /* filter: grayscale(100%) contrast(1.1) brightness(0.6); */
+            transform: scale(1.05);
+            transition: 1s;
+        }
+
+        .rv-infra-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+        }
+
+        .rv-infra-sub {
+            color: var(--primary);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: rv-fade-up 0.8s ease forwards 0.3s;
+        }
+
+        .rv-infra-title {
+            font-family: var(--font-heading);
+            font-size: 3.8rem;
+            /* Corrected Size */
+            line-height: 1.1;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: rv-fade-up 0.8s ease forwards 0.6s;
+        }
+
+        .rv-infra-title span {
+            color: transparent;
+            -webkit-text-stroke: 1px var(--primary);
+        }
+
+        @keyframes rv-fade-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* -----------------------------------------------------------
+           2. CAPACITY STATS (Grid Style)
+        ----------------------------------------------------------- */
+        .rv-stats-section {
+            padding: 20px 0;
+            background: #0a0a0a;
+            border-bottom: 1px solid var(--border-dim);
+            position: relative;
+        }
+
+        .rv-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .rv-stat-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid #ffc1075c;
+            padding: 40px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .rv-stat-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .rv-stat-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .rv-stat-num {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            /* Corrected Size */
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .rv-stat-label {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* -----------------------------------------------------------
+           3. MACHINERY SHOWCASE (Zig-Zag Layout)
+        ----------------------------------------------------------- */
+        .rv-machinery-section {
+            padding: 120px 0;
+            background-color: var(--bg-body);
+            position: relative;
+        }
+
+        .rv-machinery-header {
+            margin-bottom: 100px;
+            text-align: center;
+        }
+
+        .rv-machinery-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        /* Machine Row */
+        .rv-machine-row {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            margin-bottom: 150px;
+        }
+
+        .rv-machine-row:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Alternating Order */
+        .rv-machine-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Image Box */
+        .rv-machine-img-box {
+            flex: 1.2;
+            position: relative;
+            height: 500px;
+        }
+
+        .rv-machine-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: all 0.6s ease;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .rv-machine-row:hover .rv-machine-img {
+            filter: grayscale(0%);
+        }
+
+        /* Decorative Frame */
+        .rv-machine-frame {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 50%;
+            height: 50%;
+            border-top: 2px solid var(--primary);
+            border-left: 2px solid var(--primary);
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+        .rv-machine-row:nth-child(even) .rv-machine-frame {
+            left: auto;
+            right: -20px;
+            border-left: none;
+            border-right: 2px solid var(--primary);
+        }
+
+        /* Content Box */
+        .rv-machine-content {
+            flex: 1;
+            position: relative;
+        }
+
+        .rv-machine-num-bg {
+            font-family: var(--font-heading);
+            font-size: 8rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.03);
+            line-height: 0.8;
+            position: absolute;
+            top: -60px;
+            left: -20px;
+            z-index: -1;
+        }
+
+        .rv-machine-name {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .rv-machine-desc {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .rv-machine-spec-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            border-top: 1px solid var(--primary);
+            padding-top: 20px;
+        }
+
+        .rv-spec-item h5 {
+            color: var(--primary);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .rv-spec-item p {
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        /* -----------------------------------------------------------
+           4. TECHNOLOGY (Clean Layout)
+        ----------------------------------------------------------- */
+        .rv-tech-section {
+            padding: 100px 0;
+            background: #080808;
+            border-top: 1px solid var(--primary);
+        }
+
+        .rv-tech-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .rv-tech-intro {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .rv-tech-list {
+            flex: 1.5;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .rv-tech-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .rv-tech-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+
+        .rv-tech-head {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .rv-tech-text {
+            color: #888;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .rv-infra-title {
+                font-size: 2.8rem;
+            }
+
+            .rv-stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .rv-machine-row {
+                flex-direction: column !important;
+                gap: 40px;
+                margin-bottom: 100px;
+            }
+
+            .rv-machine-img-box {
+                width: 100%;
+                height: 300px;
+            }
+
+            .rv-machine-name {
+                font-size: 2rem;
+            }
+
+            .rv-tech-wrapper {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .rv-tech-intro {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .rv-tech-list {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Sticker HTML -->
+    <img src="assets/images/logo/freepik__img1-as-the-given-image-make-yellow-dress-up-inste__7978.png" alt="Sticker"
+        class="fixed-sticker">
+
+    <!-- HTML STRUCTURE -->
+    <div class="rv-sticky-bar">
+
+        <!-- Phone -->
+        <a href="tel:+919992500500" class="rv-sticky-btn">
+            <i class="ri-phone-fill"></i>
+            <span class="rv-tooltip">Call Now</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919992500500" target="_blank" class="rv-sticky-btn rv-pulse">
+            <i class="ri-whatsapp-line"></i>
+            <span class="rv-tooltip">WhatsApp</span>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:info@ravistainless.com" class="rv-sticky-btn">
+            <i class="ri-mail-send-fill"></i>
+            <span class="rv-tooltip">Get Quote</span>
+        </a>
+
+    </div>
+
+
+
+   <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo/rsp-logo.png" alt="Ravi Seamless Pipes" class="navbar-logo-img">
+            </a>
+
+            <!-- Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="ri-menu-5-fill"></i>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <button class="mobile-close-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="ri-close-line"></i>
+                </button>
+
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><span class="dropdown-header">Our Range</span></li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-pipes-erw-nb.html">
+                                    <i class="ri-fire-line"></i> Stainless Steel Pipes (ERW NB Pipes)
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-tubes-erw-od.html">
+                                    <i class="ri-contrast-drop-2-line"></i> Stainless Steel Tubes (ERW OD Pipes)
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-welded-rectangular-pipes.html">
+                                    <i class="ri-u-disk-line"></i> Stainless Steel Welded Rectangular Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-welded-square-pipes.html">
+                                    <i class="ri-settings-4-line"></i> Stainless Steel Welded Square Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-welded-oval-pipes.html">
+                                    <i class="ri-fire-line"></i> Stainless Steel Welded Oval Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-slotted-pipes.html">
+                                    <i class="ri-contrast-drop-2-line"></i> Stainless Steel Slotted Pipes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-coils-and-strips.html">
+                                    <i class="ri-u-disk-line"></i> Stainless Steel Coils and Strips
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stainless-steel-sheets-and-plates.html">
+                                    <i class="ri-settings-4-line"></i> Stainless Steel Sheets and Plates
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="applications.html">Applications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                    <li class="nav-item btn-quote-wrapper">
+                        <a href="#" class="btn btn-quote">Download Brochure</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- HERO -->
+    <header class="rv-infra-hero">
+        <div class="rv-infra-bg"></div>
+        <div class="rv-container">
+            <div class="rv-infra-content">
+                <span class="rv-infra-sub">Advanced Manufacturing</span>
+                <h1 class="rv-infra-title">
+                    The Backbone of <br><span>Reliability.</span>
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS OVERVIEW (Cards Style) -->
+    <section class="rv-stats-section">
+        <div class="rv-container">
+            <div class="rv-stats-grid">
+
+                <div class="rv-stat-item">
+                    <i class="ri-flashlight-line rv-stat-icon"></i>
+                    <span class="rv-stat-num">50k+</span>
+                    <span class="rv-stat-label">MT Annual Capacity</span>
+                </div>
+
+                <div class="rv-stat-item">
+                    <i class="ri-building-line rv-stat-icon"></i>
+                    <span class="rv-stat-num">50</span>
+                    <span class="rv-stat-label">Acres Facility</span>
+                </div>
+
+                <div class="rv-stat-item">
+                    <i class="ri-time-line rv-stat-icon"></i>
+                    <span class="rv-stat-num">24/7</span>
+                    <span class="rv-stat-label">Production Cycle</span>
+                </div>
+
+                <div class="rv-stat-item">
+                    <i class="ri-team-line rv-stat-icon"></i>
+                    <span class="rv-stat-num">500+</span>
+                    <span class="rv-stat-label">Skilled Workforce</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MACHINERY SHOWCASE (Zig-Zag Layout) -->
+    <section class="rv-machinery-section">
+        <div class="rv-container">
+            <div class="rv-machinery-header">
+                <span class="rv-infra-sub">Core Machinery</span>
+                <h2 class="rv-machinery-title">Powering Precision</h2>
+            </div>
+
+            <!-- Machine 1 -->
+            <div class="rv-machine-row">
+                <div class="rv-machine-img-box">
+                    <div class="rv-machine-frame"></div>
+                    <img src="assets/images/infrastructure/cold-pilger-mill.jpeg"
+                        class="rv-machine-img" alt="Cold Pilger Mill">
+                </div>
+                <div class="rv-machine-content">
+                    <span class="rv-machine-num-bg">01</span>
+                    <h3 class="rv-machine-name">Cold Pilger Mill</h3>
+                    <p class="rv-machine-desc">
+                        Advanced cold rolling technology that reduces pipe cross-section up to 90%, providing
+                        exceptional surface finish and uniform grain structure for seamless pipes.
+                    </p>
+                    <div class="rv-machine-spec-list">
+                        <div class="rv-spec-item">
+                            <h5>Capacity</h5>
+                            <p>5,000 MT/Year</p>
+                        </div>
+                        <div class="rv-spec-item">
+                            <h5>Precision</h5>
+                            <p>±0.05 mm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine 2 -->
+            <div class="rv-machine-row">
+                <div class="rv-machine-img-box">
+                    <div class="rv-machine-frame"></div>
+                    <img src="assets/images/infrastructure/rotary-hearth-furnace.jpeg"
+                        class="rv-machine-img" alt="Rotary Hearth Furnace">
+                </div>
+                <div class="rv-machine-content">
+                    <span class="rv-machine-num-bg">02</span>
+                    <h3 class="rv-machine-name">Rotary Hearth Furnace</h3>
+                    <p class="rv-machine-desc">
+                        Precision-controlled heating system ensuring uniform temperature for billet piercing
+                        preparation. Fully automated handling enhances throughput and consistency.
+                    </p>
+                    <div class="rv-machine-spec-list">
+                        <div class="rv-spec-item">
+                            <h5>Temp Range</h5>
+                            <p>Up to 1300°C</p>
+                        </div>
+                        <div class="rv-spec-item">
+                            <h5>Control</h5>
+                            <p>PLC Automated</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine 3 -->
+            <div class="rv-machine-row">
+                <div class="rv-machine-img-box">
+                    <div class="rv-machine-frame"></div>
+                    <img src="assets/images/infrastructure/automated-draw-bench.jpeg"
+                        class="rv-machine-img" alt="Automated Draw Bench">
+                </div>
+                <div class="rv-machine-content">
+                    <span class="rv-machine-num-bg">03</span>
+                    <h3 class="rv-machine-name">Automated Draw Bench</h3>
+                    <p class="rv-machine-desc">
+                        High-capacity hydraulic draw benches for precise cold drawing operations,
+                        achieving exact dimensional tolerances for critical industries.
+                    </p>
+                    <div class="rv-machine-spec-list">
+                        <div class="rv-spec-item">
+                            <h5>Force</h5>
+                            <p>100 Tonnes</p>
+                        </div>
+                        <div class="rv-spec-item">
+                            <h5>Speed</h5>
+                            <p>Variable Drive</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TECHNOLOGY (Clean Layout) -->
+    <section class="rv-tech-section">
+        <div class="rv-container">
+            <div class="rv-tech-wrapper">
+
+                <!-- Intro -->
+                <div class="rv-tech-intro">
+                    <span class="rv-infra-sub">Innovation</span>
+                    <h2 class="rv-machinery-title">Smart Manufacturing</h2>
+                    <p class="rv-machine-desc">
+                        Leveraging Industry 4.0 and advanced process control to deliver high-precision seamless steel
+                        products.
+                    </p>
+                </div>
+
+                <!-- Tech Features List -->
+                <div class="rv-tech-list">
+
+                    <div class="rv-tech-item">
+                        <i class="ri-cpu-line rv-tech-icon"></i>
+                        <div>
+                            <h4 class="rv-tech-head">Automation</h4>
+                            <p class="rv-tech-text">
+                                Fully PLC-controlled machinery minimizes human error and ensures uniform quality across
+                                all production lines.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rv-tech-item">
+                        <i class="ri-recycle-line rv-tech-icon"></i>
+                        <div>
+                            <h4 class="rv-tech-head">Sustainability</h4>
+                            <p class="rv-tech-text">
+                                Zero-liquid discharge facility with acid regeneration and waste management systems,
+                                maintaining environmental responsibility.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rv-tech-item">
+                        <i class="ri-speed-up-line rv-tech-icon"></i>
+                        <div>
+                            <h4 class="rv-tech-head">Efficiency</h4>
+                            <p class="rv-tech-text">
+                                Optimized plant layout and smart material flow reduce handling time and boost throughput
+                                by up to 30%.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rv-tech-item">
+                        <i class="ri-shield-check-line rv-tech-icon"></i>
+                        <div>
+                            <h4 class="rv-tech-head">Safety First</h4>
+                            <p class="rv-tech-text">
+                                AI-enabled monitoring and strict SOP compliance ensure maximum workforce and equipment
+                                safety.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- footer start -->
+    <footer class="rv-footer">
+
+        <!-- Scroll Top Btn -->
+        <button class="rv-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <i class="ri-arrow-up-line" style="font-size: 1.5rem;"></i>
+        </button>
+
+        <div class="rv-footer-container">
+
+            <!-- Main Grid -->
+            <div class="rv-footer-grid">
+
+                <!-- Col 1: Brand -->
+                <div class="rv-footer-col">
+                    <div class="rv-footer-logo">RAVI <span>SEAMLESS</span></div>
+                    <p class="rv-footer-desc">
+                        Engineering the future of piping with precision, durability, and global standards. Your trusted
+                        partner for stainless steel solutions.
+                    </p>
+                    <div class="rv-social-links">
+                        <a href="https://www.linkedin.com/company/ravi-seamless" target="_blank"
+                            class="rv-social-icon"><i class="ri-linkedin-fill"></i></a>
+                        <a href="https://twitter.com/ravi_seamless" target="_blank" class="rv-social-icon"><i
+                                class="ri-twitter-x-fill"></i></a>
+                        <a href="https://www.facebook.com/raviseamless" target="_blank" class="rv-social-icon"><i
+                                class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/raviseamless" target="_blank" class="rv-social-icon"><i
+                                class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="rv-footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="rv-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Products -->
+                <div class="rv-footer-col">
+                    <h4>Products</h4>
+                    <ul class="rv-footer-links">
+                        <li>
+                            <a href="stainless-steel-pipes-erw-nb.html">
+                                <i class="ri-fire-line"></i> Stainless Steel Pipes (ERW NB Pipes)
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stainless-steel-tubes-erw-od.html">
+                                <i class="ri-contrast-drop-2-line"></i> Stainless Steel Tubes (ERW OD Pipes)
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stainless-steel-welded-rectangular-pipes.html">
+                                <i class="ri-u-disk-line"></i> Stainless Steel Welded Rectangular Pipes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="stainless-steel-welded-square-pipes.html">
+                                <i class="ri-settings-4-line"></i> Stainless Steel Welded Square Pipes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="rv-footer-col">
+                    <h4>Stay Updated</h4>
+                    <div class="rv-newsletter-box">
+                        <p class="rv-news-text">Subscribe to our newsletter for latest industry updates and company
+                            news.</p>
+                        <form class="rv-news-form">
+                            <input type="email" class="rv-news-input" placeholder="Enter your email" required>
+                            <button type="submit" class="rv-news-btn"><i class="ri-send-plane-fill"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="rv-footer-divider"></div>
+
+            <!-- Bottom Row -->
+            <div class="rv-footer-bottom">
+                <div class="rv-copyright">
+                    &copy; 2026 Ravi Seamless Pipes & Tubes Pvt. Ltd. All Rights Reserved.
+                    designed by <span> <a href="https://www.webadsindia.com/"
+                            style="text-decoration: none; color: #ffff;"> Web Ads India </a> </span>
+                </div>
+                <div class="rv-footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        // Scroll Effect for Navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 20) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // Mobile Menu Close Logic
+        const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item');
+        const menuToggle = document.querySelector('.navbar-collapse');
+        const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
+
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => {
+                if (window.innerWidth < 992 && menuToggle.classList.contains('show')) {
+                    bsCollapse.hide();
+                }
+            });
+        });
+
+        // GSAP Animations
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const tl = gsap.timeline();
+
+            // 1. Reveal Overline
+            tl.to(".hero-overline", {
+                y: 0,
+                duration: 0.8,
+                ease: "power3.out",
+                delay: 0.2
+            })
+                // 2. Reveal Title Words (Staggered)
+                .to(".hero-title .word", {
+                    y: 0,
+                    duration: 1,
+                    stagger: 0.15,
+                    ease: "power4.out"
+                }, "-=0.4")
+                // 3. Fade In Description
+                .to(".hero-desc", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                }, "-=0.5")
+                // 4. Reveal Buttons
+                .to(".hero-btn-group", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power3.out"
+                }, "-=0.6")
+                // 5. Reveal Stats Card
+                .to(".hero-stats-card", {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: "power3.out"
+                }, "-=0.6")
+                // 6. Scroll Indicator
+                .to(".scroll-indicator", {
+                    opacity: 1,
+                    duration: 1
+                }, "-=0.4");
+        });
+    </script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".productSwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+</body>
+
+</html>
