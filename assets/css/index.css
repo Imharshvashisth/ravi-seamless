@@ -516,7 +516,7 @@ body {
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     padding: 80px 30px 30px;
     transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     overflow-y: auto;
     z-index: 999;
