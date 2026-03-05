@@ -99,7 +99,7 @@ body {
   /* Product close-up image */
   background:
     linear-gradient(to right, #000000aa 40%, rgba(0, 0, 0, 0.418) 100%),
-    url("https://newzelindustries.com/wp-content/uploads/2021/07/Stainless-Steel-seamless-Pipes-manufacturing.jpg");
+    url("../images/banner/product-banner.jpeg");
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -329,7 +329,7 @@ body {
   /* Adding Fixed Background Image with Dark Overlay */
   background:
     linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-    url("https://songshunsteel.com/wp-content/uploads/2024/01/steel-pipe-factory-supply.webp");
+    url("../images/products/technical-bg.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

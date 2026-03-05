@@ -144,7 +144,7 @@
                     <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
                     <li class="nav-item btn-quote-wrapper">
-                        <a href="#" class="btn btn-quote">Download Brochure</a>
+                        <a class="btn btn-quote">Download Brochure</a>
                     </li>
                 </ul>
             </div>
@@ -155,9 +155,8 @@
     <!-- HERO SECTION START -->
     <main>
         <section class="hero-section">
-            <video class="hero-bg-video" autoplay muted loop playsinline
-                poster="https://images.unsplash.com/photo-1565610260662-520556276d49?q=80&w=2548&auto=format&fit=crop">
-                <source src="assets/images/banner/2267429_Park_Public_Park_1920x1080.mp4" type="video/mp4">
+            <video class="hero-bg-video" autoplay muted loop playsinline poster="assets/images/banner/home-ban.mp4">
+                <source src="assets/images/banner/home-ban.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 
@@ -183,8 +182,9 @@
                         </p>
 
                         <div class="hero-btn-group">
-                            <a href="#" class="btn btn-hero-primary"><span>Explore Products</span></a>
-                            <a href="#" class="btn btn-hero-outline">Contact Us</a>
+                            <a href="stainless-steel-pipes-erw-nb.html" class="btn btn-hero-primary"><span>Explore
+                                    Products</span></a>
+                            <a href="contact-us.html" class="btn btn-hero-outline">Contact Us</a>
                         </div>
                     </div>
 
@@ -268,7 +268,7 @@
                             </div>
                         </div>
 
-                        <a href="#" class="btn-refined">
+                        <a href="about-us.html" class="btn-refined">
                             Our Story <i class="ri-arrow-right-line" style="margin-left: 10px;"></i>
                         </a>
                     </div>
@@ -902,7 +902,8 @@
                                 Stainless steel seamless pipes and tubes for high-pressure applications in refineries
                                 and offshore rigs.
                             </p>
-                            <a href="#" class="ind-link">View Applications <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="applications.html" class="ind-link">View Applications <i
+                                    class="ri-arrow-right-up-line"></i></a>
                         </div>
 
                     </div>
@@ -1330,33 +1331,38 @@
                     <div class="rv-form-card">
                         <h3 class="rv-form-title">Request a Quote</h3>
 
-                        <form action="#">
+                        <form method="POST" action="ravi-mail.php">
+
                             <div class="rv-input-group">
-                                <input type="text" class="rv-input-field" required>
+                                <input type="text" name="full_name" class="rv-input-field" required>
                                 <label class="rv-input-label">Full Name</label>
                             </div>
 
                             <div class="rv-input-group">
-                                <input type="email" class="rv-input-field" required>
+                                <input type="email" name="email" class="rv-input-field" required>
                                 <label class="rv-input-label">Business Email</label>
                             </div>
 
                             <div class="rv-input-group">
-                                <input type="text" class="rv-input-field" required>
+                                <input type="text" name="phone" class="rv-input-field" required>
                                 <label class="rv-input-label">Phone / WhatsApp</label>
                             </div>
 
                             <div class="rv-input-group">
-                                <input type="text" class="rv-input-field" required>
+                                <input type="text" name="company" class="rv-input-field" required>
                                 <label class="rv-input-label">Company Name</label>
                             </div>
 
                             <div class="rv-input-group">
-                                <textarea class="rv-input-field" rows="1" style="resize: none;" required></textarea>
+                                <textarea name="requirements" class="rv-input-field" rows="1" style="resize: none;"
+                                    required></textarea>
                                 <label class="rv-input-label">Project Requirements</label>
                             </div>
 
-                            <button type="submit" class="rv-submit-btn">Send Inquiry</button>
+                            <button type="submit" name="submit" class="rv-submit-btn">
+                                Send Inquiry
+                            </button>
+
                         </form>
                     </div>
                 </div>
@@ -1430,14 +1436,10 @@
                         partner for stainless steel solutions.
                     </p>
                     <div class="rv-social-links">
-                        <a href="https://www.linkedin.com/company/ravi-seamless" target="_blank"
-                            class="rv-social-icon"><i class="ri-linkedin-fill"></i></a>
-                        <a href="https://twitter.com/ravi_seamless" target="_blank" class="rv-social-icon"><i
-                                class="ri-twitter-x-fill"></i></a>
-                        <a href="https://www.facebook.com/raviseamless" target="_blank" class="rv-social-icon"><i
-                                class="ri-facebook-fill"></i></a>
-                        <a href="https://www.instagram.com/raviseamless" target="_blank" class="rv-social-icon"><i
-                                class="ri-instagram-fill"></i></a>
+                        <a target="_blank" class="rv-social-icon"><i class="ri-linkedin-fill"></i></a>
+                        <a target="_blank" class="rv-social-icon"><i class="ri-twitter-x-fill"></i></a>
+                        <a target="_blank" class="rv-social-icon"><i class="ri-facebook-fill"></i></a>
+                        <a target="_blank" class="rv-social-icon"><i class="ri-instagram-fill"></i></a>
                     </div>
                 </div>
 
@@ -1509,9 +1511,9 @@
                             style="text-decoration: none; color: #ffff;"> Web Ads India </a> </span>
                 </div>
                 <div class="rv-footer-legal">
-                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <!-- <a href="privacy-policy.html">Privacy Policy</a>
                     <a href="terms-of-use.html">Terms of Use</a>
-                    <a href="sitemap.html">Sitemap</a>
+                    <a href="sitemap.html">Sitemap</a> -->
                 </div>
             </div>
 
