@@ -3576,3 +3576,10 @@ body {
   letter-spacing: 1px;
   font-weight: 600;
 }
+
+/* Tablet */
+@media (max-width: 991px) {
+  .rv-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
